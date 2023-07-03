@@ -14,6 +14,11 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
+    def __del__(self):
+        """dectractor"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
+
     @property
     def width(self):
         """getter for width"""
@@ -63,8 +68,3 @@ class Rectangle:
     def __repr__(self):
         """string representation of the rectangle for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """dectractor"""
-        print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
