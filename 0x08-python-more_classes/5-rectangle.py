@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Rectangle """
+"""Rectangle"""
 
 
 class Rectangle:
@@ -54,6 +54,7 @@ class Rectangle:
     def __repr__(self):
         """string representation of the rectangle for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
     def __del__(self):
         """dectractor"""
-        print('Bye rectangle...')
+        print("Bye rectangle...")
