@@ -1,8 +1,5 @@
 -- lists all cities contained in the database
-SELECT cities.id, cities.name
+SELECT cities.id, cities.name, states.name
 FROM cities
-WHERE state_id = (
-    SELECT states.id
-    FROM states
-    WHERE states.name = "California"
-    );
+JOIN states
+ON cities.state_id = states.id;
